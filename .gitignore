@@ -1,0 +1,13 @@
+# Config
+config.py
+config.bat
+
+# Cache
+.idea/
+__pycache__/
+
+# Repertories
+utils/
+
+# Packages
+flask_httpauth.py
