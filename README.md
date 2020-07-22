@@ -139,8 +139,8 @@ NB: - description in {"Vanilla option", "Double digital option", "Asian option",
 }
 ```
 ```text
-NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
-    - option_type in {"Double digital"}
+NB: - description in {"Double digital option"}
+    - option_type in {"Double_Digital"}
 ```
 
 ### II. Pricing of path dependent options
@@ -158,8 +158,8 @@ NB: - description in {"Vanilla option", "Double digital option", "Asian option",
 } 
 ```
 ```text
-NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
-    - option_type in {"Arithmetric_Average_Call", "Arithmetric_Average_Put", "Geometric_Average_Call", "Geometric_Average_Put", "Arithmetric_Flottant_Call", "Arithmetric_Flottant_Put", "Geometric_Flottant_Call", "Geometric_Flottant_Put"}
+NB: - description in {"Asian option"}
+    - option_type in {"Arithmetic_Average_Call", "Arithmetic_Average_Put", "Geometric_Average_Call", "Geometric_Average_Put", "Arithmetic_Floating_Call", "Arithmetic_Floating_Put", "Geometric_Floating_Call", "Geometric_Floating_Put"}
 ```
 
 ### 4. Pricing of look-back options
@@ -176,8 +176,8 @@ NB: - description in {"Vanilla option", "Double digital option", "Asian option",
 }
 ```
 ```text
-NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
-    - option_type in {"lookback_Call", "lookback_Put"}
+NB: - description in {"LookBack option"}
+    - option_type in {"lookBack_Call", "lookBack_Put"}
 ```
 
 ### 5. Pricing of Basket options
@@ -199,7 +199,7 @@ NB: - description in {"Vanilla option", "Double digital option", "Asian option",
 }
 ```
 ```text
-NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
+NB: - description in {"Basket option"}
     - option_type in {"Basket_Call", "Basket_Put"}
 ```
 
@@ -220,7 +220,7 @@ NB: - description in {"Vanilla option", "Double digital option", "Asian option",
 }
 ```
 ```text
-NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
+NB: - description in {"Best of option", "Worst of option"}
     - option_type in {"BestOf_Call", "BestOf_Put", "WorstOf_Call", "WorstOf_Put"}
 ```
 

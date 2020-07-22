@@ -175,7 +175,7 @@ def create_task():
         task['delta'] = delta
         task['done'] = True
         task['status'] = "Returns a price and delta of asian option"
-    elif request.json['description'] == "Lookback option":
+    elif request.json['description'] == "LookBack option":
         task = {
             'id': tasks[-1]['id'] + 1 if len(tasks) > 0 else 1,
             'title': request.json.get('title', ""),  # ['title'],
