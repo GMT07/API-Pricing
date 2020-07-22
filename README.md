@@ -75,7 +75,7 @@ Example: Format Json
     "spot": 100.0, 
     "strike": 100.0, 
     "risk_free": 0.01, 
-    "sigma": 0.1, 
+    "volatility": 0.1, 
     "maturity": 1.0
 }
 
@@ -91,7 +91,7 @@ Location: http://localhost:5000/guy/api/v1.0/tasks
     "option_type": "Vanilla_Put",
     "price": 3.44081211209072,
     "risk_free": 0.01,
-    "sigma": 0.1,
+    "volatility": 0.1,
     "spot": 100.0,
     "status": "Returns a price and delta of vanilla option",
     "strike": 100.0,
@@ -108,58 +108,79 @@ _
 ### 1. Vanilla options
 ```json
 {
-    "option_type": "values", """values in { Vanilla_Call, Vanilla_Put, Cash_Or_Nothing_Call, Cash_Or_Nothing_Put, Asset_Or_Nothing_Call, Asset_Or_Nothing_Put}
+    "title": ,
+    "description": ,
+    "option_type": , 
     "strike": , 
     "maturity": ,
     "spot": ,
     "volatility": ,
-    "interestRate": 
+    "risk_free": 
 } 
+NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
+    - option_type in {"Vanilla_Call", "Vanilla_Put", "Cash_Or_Nothing_Call", "Cash_Or_Nothing_Put", "Asset_Or_Nothing_Call", "Asset_Or_Nothing_Put"}
 ```
 
 ### 2. Pricing of doubles digital options
 ```json
 {
-    "option_type": "Double digital",
+    "title": ,
+    "description": ,
+    "option_type": ,
     "low": ,
     "up": ,
     "strike": ,
     "maturity": ,
     "spot": ,
     "volatility": ,
-    "interestRate":  
+    "risk_free":  
 }
+
+NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
+    - option_type in {"Double digital"}
 ```
 
 ### II. Pricing of path dependent options
 ### 3. Pricing of asian options
 ```json
 {
-    "option_type": "values",   """values in { Arithmetric_Average_Call, Arithmetric_Average_Put, Geometric_Average_Call, Geometric_Average_Put, Arithmetric_Flottant_Call, Arithmetric_Flottant_Put, Geometric_Flottant_Call, Geometric_Flottant_Put}"""
+    "title": ,
+    "description": ,
+    "option_type": ,   
     "strike": , 
     "maturity": ,
     "spot": ,
     "volatility": ,
-    "interestRate": 
+    "risk_free": 
 } 
+
+NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
+    - option_type in {"Arithmetric_Average_Call", "Arithmetric_Average_Put", "Geometric_Average_Call", "Geometric_Average_Put", "Arithmetric_Flottant_Call", "Arithmetric_Flottant_Put", "Geometric_Flottant_Call", "Geometric_Flottant_Put"}
 ```
 
 ### 4. Pricing of look-back options
 ```json
 {
-    "option_type": "values", """values in {lookback_Call, lookback_Put}"""
+    "title": ,
+    "description": ,
+    "option_type": , 
     "strike": ,
     "maturity": ,
     "spot": ,
     "volatility": ,
-    "interestRate":  
+    "risk_free":  
 }
+
+NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
+    - option_type in {"lookback_Call", "lookback_Put"}
 ```
 
 ### 5. Pricing of Basket options
 ```json
 {
-    "option_type": "values", """values in {Basket_Call, Basket_Put}"""
+    "title": ,
+    "description": ,
+    "option_type": , 
     "a": ,
     "b": ,
     "strike": ,
@@ -169,14 +190,19 @@ _
     "vol1": ,
     "vol2": ,
     "rho": ,
-    "interestRate":  
+    "risk_free":  
 }
+
+NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
+    - option_type in {"Basket_Call", "Basket_Put"}
 ```
 
 ### 6. Pricing of Best of and Worst of options
 ```json
 {
-    "option_type": "values", """values in {BestOf_Call, BestOf_Put, WorstOf_Call, WorstOf_Put}"""
+    "title": ,
+    "description": ,
+    "option_type": , 
     "strike": ,
     "maturity": ,
     "spot1": ,
@@ -184,8 +210,11 @@ _
     "vol1": ,
     "vol2": ,
     "rho": ,
-    "interestRate":  
+    "risk_free":  
 }
+
+NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
+    - option_type in {"BestOf_Call", "BestOf_Put", "WorstOf_Call", "WorstOf_Put"}
 ```
 
 ## Contributing

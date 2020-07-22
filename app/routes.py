@@ -89,16 +89,16 @@ def create_task():
     if not request.json or 'description' not in request.json:
         abort(400)
 
-    if request.json['description'] == 'Vanilla option':
+    if request.json['description'] == "Vanilla option":
         task = {
             'id': tasks[-1]['id'] + 1 if len(tasks) > 0 else 1,
-            'title': request.json['title'],
+            'title': request.json.get('title', ""),  # ['title'],
             'description': request.json['description'],
             'option_type': request.json['option_type'],
             'spot': request.json['spot'],
             'strike': request.json['strike'],
             'risk_free': request.json['risk_free'],
-            'sigma': request.json['sigma'],
+            'volatility': request.json['volatility'],
             'maturity': request.json['maturity'],
             'done': False
         }
@@ -107,7 +107,7 @@ def create_task():
         spot = task['spot']
         strike = task['strike']
         interest_rate = task['risk_free']
-        volatility = task['sigma']
+        volatility = task['volatility']
         maturity = task['maturity']
 
         price = pricer.MonteCarloOneUnderlying(option_type, strike, maturity, spot, volatility, interest_rate, 10000.0)
@@ -116,16 +116,16 @@ def create_task():
         task['delta'] = delta
         task['done'] = True
         task['status'] = "Returns a price and delta of vanilla option"
-    elif request.json['description'] == 'Double digital option':
+    elif request.json['description'] == "Double digital option":
         task = {
             'id': tasks[-1]['id'] + 1 if len(tasks) > 0 else 1,
-            'title': request.json['title'],
+            'title': request.json.get('title', ""),  # ['title'],
             'description': request.json['description'],  # request.json.get('description', ""),
             'option_type': request.json['option_type'],
             'spot': request.json['spot'],
             'strike': request.json['strike'],
             'risk_free': request.json['risk_free'],
-            'sigma': request.json['sigma'],
+            'volatility': request.json['volatility'],
             'maturity': request.json['maturity'],
             'low': request.json['low'],
             'up': request.json['up'],
@@ -135,7 +135,7 @@ def create_task():
         option_type = task['option_type']
         spot = task['spot']
         interest_rate = task['risk_free']
-        volatility = task['sigma']
+        volatility = task['volatility']
         maturity = task['maturity']
         low = task['low']
         up = task['up']
@@ -149,13 +149,13 @@ def create_task():
     elif request.json['description'] == "Asian option":
         task = {
             'id': tasks[-1]['id'] + 1 if len(tasks) > 0 else 1,
-            'title': request.json['title'],
+            'title': request.json.get('title', ""),  # ['title'],
             'description': request.json['description'],  # request.json.get('description', ""),
             'option_type': request.json['option_type'],
             'spot': request.json['spot'],
             'strike': request.json['strike'],
             'risk_free': request.json['risk_free'],
-            'sigma': request.json['sigma'],
+            'volatility': request.json['volatility'],
             'maturity': request.json['maturity'],
             'done': False
         }
@@ -164,7 +164,7 @@ def create_task():
         spot = task['spot']
         strike = task['strike']
         interest_rate = task['risk_free']
-        volatility = task['sigma']
+        volatility = task['volatility']
         maturity = task['maturity']
 
         price = pricer.MonteCarloAsianOptions(option_type, strike, maturity, spot, volatility, interest_rate,
@@ -178,13 +178,13 @@ def create_task():
     elif request.json['description'] == "Lookback option":
         task = {
             'id': tasks[-1]['id'] + 1 if len(tasks) > 0 else 1,
-            'title': request.json['title'],
+            'title': request.json.get('title', ""),  # ['title'],
             'description': request.json['description'],  # request.json.get('description', ""),
             'option_type': request.json['option_type'],
             'spot': request.json['spot'],
             'strike': request.json['strike'],
             'risk_free': request.json['risk_free'],
-            'sigma': request.json['sigma'],
+            'volatility': request.json['volatility'],
             'maturity': request.json['maturity'],
             'done': False
         }
@@ -193,7 +193,7 @@ def create_task():
         spot = task['spot']
         strike = task['strike']
         interest_rate = task['risk_free']
-        volatility = task['sigma']
+        volatility = task['volatility']
         maturity = task['maturity']
 
         price = pricer.MonteCarlo_LookBack(option_type, strike, maturity, spot, volatility, interest_rate, 100.0,
@@ -206,7 +206,7 @@ def create_task():
     elif request.json['description'] == "Basket option":
         task = {
             'id': tasks[-1]['id'] + 1 if len(tasks) > 0 else 1,
-            'title': request.json['title'],
+            'title': request.json.get('title', ""),  # ['title'],
             'description': request.json['description'],  # request.json.get('description', ""),
             'option_type': request.json['option_type'],
             'strike': request.json['strike'],
@@ -241,7 +241,7 @@ def create_task():
     elif request.json['description'] == "Best of option" or request.json['description'] == "Worst of option":
         task = {
             'id': tasks[-1]['id'] + 1 if len(tasks) > 0 else 1,
-            'title': request.json['title'],
+            'title': request.json.get('title', ""),  # ['title'],
             'description': request.json['description'],  # request.json.get('description', ""),
             'option_type': request.json['option_type'],
             'strike': request.json['strike'],
