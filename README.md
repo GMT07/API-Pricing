@@ -116,7 +116,9 @@ _
     "spot": ,
     "volatility": ,
     "risk_free": 
-} 
+}
+```
+```text 
 NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
     - option_type in {"Vanilla_Call", "Vanilla_Put", "Cash_Or_Nothing_Call", "Cash_Or_Nothing_Put", "Asset_Or_Nothing_Call", "Asset_Or_Nothing_Put"}
 ```
@@ -135,7 +137,8 @@ NB: - description in {"Vanilla option", "Double digital option", "Asian option",
     "volatility": ,
     "risk_free":  
 }
-
+```
+```text
 NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
     - option_type in {"Double digital"}
 ```
@@ -153,7 +156,8 @@ NB: - description in {"Vanilla option", "Double digital option", "Asian option",
     "volatility": ,
     "risk_free": 
 } 
-
+```
+```text
 NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
     - option_type in {"Arithmetric_Average_Call", "Arithmetric_Average_Put", "Geometric_Average_Call", "Geometric_Average_Put", "Arithmetric_Flottant_Call", "Arithmetric_Flottant_Put", "Geometric_Flottant_Call", "Geometric_Flottant_Put"}
 ```
@@ -170,7 +174,8 @@ NB: - description in {"Vanilla option", "Double digital option", "Asian option",
     "volatility": ,
     "risk_free":  
 }
-
+```
+```text
 NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
     - option_type in {"lookback_Call", "lookback_Put"}
 ```
@@ -192,7 +197,8 @@ NB: - description in {"Vanilla option", "Double digital option", "Asian option",
     "rho": ,
     "risk_free":  
 }
-
+```
+```text
 NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
     - option_type in {"Basket_Call", "Basket_Put"}
 ```
@@ -212,7 +218,8 @@ NB: - description in {"Vanilla option", "Double digital option", "Asian option",
     "rho": ,
     "risk_free":  
 }
-
+```
+```text
 NB: - description in {"Vanilla option", "Double digital option", "Asian option", "Lookback option", "Basket option", "Best of option", "Worst of option"}
     - option_type in {"BestOf_Call", "BestOf_Put", "WorstOf_Call", "WorstOf_Put"}
 ```
