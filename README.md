@@ -231,7 +231,7 @@ Tools
 -----
 
 - GET : http://localhost:5000/guy/api/v1.0/tasks 
-- GET : http://localhost:5000/guy/api/v1.0/tasks/task_id
+- GET : http://localhost:5000/guy/api/v1.0/tasks/:task_id
 - POST : http://localhost:5000/guy/api/v1.0/tasks
-- PUT : http://localhost:5000/guy/api/v1.0/tasks/task_id
-- DELETE : http://localhost:5000/guy/api/v1.0/tasks/task_id
+- PUT : http://localhost:5000/guy/api/v1.0/tasks/:task_id
+- DELETE : http://localhost:5000/guy/api/v1.0/tasks/:task_id
